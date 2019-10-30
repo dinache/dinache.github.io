@@ -5,29 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Ping coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    :root{
+      --Blue: hsl(223, 87%, 63%);
+      --Pale-Blue: hsl(223, 100%, 88%);
+      --Light-Red: hsl(354, 100%, 66%);
+      --Gray: hsl(0, 0%, 59%);
+      --Light-Gray: #C5CBDB;
+      --Dark-Blue: hsl(209, 33%, 12%);
+    }
+
+    body{
+      font-family: 'Libre Franklin', sans-serif;
+    }
+
+    h1{
+      font-size: 42px;
+      font-weight: 300;
+      color: var(--Gray);
+      letter-spacing: 1px;
+    }
+    h1 span.bold{
+      color: black;
+      font-weight:700;
+    }
+
+    h2{
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+
+    .container{
+      text-align: center;
+      width: 700px;
+      margin: auto;
+      margin-top: 30px;
+      //background-color: #FFF000;
+    }
+
+    .form-container{
+      display:grid;
+      grid-template-columns: 65% 35%;
+      grid-template-areas: "email notify";
+      margin-top: 40px;
+    }
+    .email{
+      padding:10px;
+      grid-area: email;
+    }
+    .notify{
+      padding:10px;
+      grid-area: notify;
+      color: var(--Blue);
+    }
+
+    .notify button{
+      position:relative;
+      color: white;
+      background-color: var(--Blue);
+      font-size: 18px;
+      padding: 15px;
+      width: 100%;
+      border: none ;
+      border-radius: 50px;
+      box-shadow: 0px 5px 10px var(--Pale-Blue);
+    }
+    .notify button:hover{
+      cursor:pointer;
+    }
+
+    .notify button:active{
+      background-color: var(--Pale-Blue);
+      top: 2px;
+    }
+    
+    input[type=email]{
+      color: black;
+      width: 90%;
+      padding:  15px 0px 15px 25px;
+      font-size: 16px;
+      font-weight:300;
+      border: solid 1px;
+      border-radius:50px;
+      border-color: var(--Light-Gray);
+    }
+
+    input:invalid{
+      border-color: var(--Light-Red);
+
+
+    }
+
+    img{
+      margin-top: 25px;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  We are launching soon!
+    <img src="images/logo.svg"><br/>
+    <h1>We are launching <span class="bold">soon!<span></h1>
 
-  Subscribe and get notified
+    <h2>Subscribe and get notified</h2>
 
-  Notify Me
+    <div class="form-container">
+      <div class="email">
+        <input type="email" placeholder="Your email address...">
 
-  &copy; Copyright Ping. All rights reserved.
+        
+      </div>
+      <div class="notify"><button>Notify Me</button></div>
+    </div>
+
+      <img src="images/illustration-dashboard.png">
+      
+  </div>
 
   <footer>
+    <div class="attribution" style="color:#A0A0A0"> &copy; Copyright Ping. All rights reserved.</div>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/dinache">Dina Chen</a>.
     </p>
   </footer>
 </body>
