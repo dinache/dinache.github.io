@@ -40,6 +40,7 @@
       line-height: 20px;
     }
 
+
     .container{
       text-align: center;
       width: 700px;
@@ -54,6 +55,7 @@
       grid-template-areas: "email notify";
       margin-top: 40px;
     }
+
     .email{
       padding:10px;
       grid-area: email;
@@ -103,12 +105,103 @@
 
     img{
       margin-top: 25px;
+
       max-width: 100%;
       max-height: 100%;
     }
 
+    .social{
+      width: 25%;
+      display:grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-areas: "fb twt ig";
+      padding-top: 50px;
+      padding-bottom: 30px;
+      margin:auto;
+    }
+
+    .fb{
+      grid-area:fb;
+    }
+
+    .fb button{
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      background-image: url("social/fb-state.png");
+      background-size: 40px;
+      border:none;
+    }
+
+    .fb button:hover{
+      background: url("social/fb-hover.png");
+      background-size: 40px;
+      cursor:pointer;
+    }
+
+    .twt{
+      grid-area: twt;
+    }
+    .twt button{
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      background-image: url("social/twt-state.png");
+      background-size: 40px;
+      border:none;
+    }
+
+    .twt button:hover{
+      background: url("social/twt-hover.png");
+      background-size: 40px;
+      cursor:pointer;
+    }
+    .ig{
+      grid-area:ig;
+    }
+
+   .ig button{
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      background-image: url("social/ig-state.png");
+      background-size: 40px;
+      border:none;
+    }
+
+    .ig button:hover{
+      background: url("social/ig-hover.png");
+      background-size: 40px;
+      cursor:pointer;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+        /* responsive mobile sizing*/
+    @media screen and (min-width: 500px) and (max-width: 750px) {
+
+    .container{
+      width: 500px;
+    }
+    .form-container{
+      display:grid;
+      grid-template-columns: auto;
+      grid-template-areas: "email" "notify";
+      margin-top: 40px;
+    }
+    .notify{
+      grid-area: notify;
+      width: 92%;
+      margin:auto;
+    }
+    .social{
+      width:30%;
+    }
+
+  }
+
+
   </style>
 </head>
 <body>
@@ -129,10 +222,20 @@
     </div>
 
       <img src="images/illustration-dashboard.png">
+
+    <div class="social">
+      <div class="fb"><button></button></div>
+      <div class="twt"><button></button></div>
+      <div class="ig"><button></button></div>
+
+
+    </div> 
       
   </div>
 
   <footer>
+
+  
     <div class="attribution" style="color:#A0A0A0"> &copy; Copyright Ping. All rights reserved.</div>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
