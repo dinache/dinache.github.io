@@ -16,6 +16,7 @@
     }
 
     body{
+      background-color: #F7F7F7;
       
     }
 
@@ -54,20 +55,83 @@
 ;
     }
 
-    .header{
-      max-width: 600px;
-      margin:auto;
-      margin-top: 80px;
-      text-align:center;
+    a{
+      color: var(--Gray);
+      transition: 0.5s;
+      text-decoration: none
     }
 
+     a:visited{
+      color: var(--Gray);
+    }
+
+    a:hover{
+      color: var(--Gray-Dark);
+      transition: 0.3s;
+    }
+
+    .nav-link.active{
+      color: var(--Gray-Dark);
+    }
+
+
+
+    .header{
+
+      max-width: 100%;
+      margin:auto;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 80px;
+      display:grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: 
+        "home links"
+        "intro intro";
+      text-align: center;
+    }
+
+    .home{
+      grid-area: home;
+      font-weight:600;
+      font-size: 32px;
+      line-height: 15px;
+      color: rgba(0, 0, 0, 0.4);
+
+    }
+
+
+
+    .links{
+      background-color: #F7F7F7;
+      display: flex;
+      flex-direction: row;
+      grid-area: links;
+      font-family:"Roboto Mono";
+      font-weight: 200;
+      color: (var(--Gray));
+      margin: auto;
+      margin-right: 0px;
+
+    }
+
+    .nav-item{
+      color: #495057;
+    }
+
+    .nav-link {
+  background: none;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
     .intro{
+      grid-area: intro;
       font-family:"Roboto Mono";
       font-weight: 400;
       color:var(--Gray-Dark);
       margin-bottom: 40px;
     }
-
 
     .card-grid{
       height:800px;
@@ -76,6 +140,11 @@
       margin:auto;
       grid-template-columns: auto 10% 10% 10% 10% 10% 10% 10% auto;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    }
+
+    .card-grid.right{
+      
       grid-template-areas: 
       ". card2 card2 card2 card1 card1 card1 card1 ."
       ". card2 card2 card2 card1 card1 card1 card1 ."
@@ -84,31 +153,85 @@
       ". card3 card3 card3 card4 card4 card5 card5 ."
       ". card3 card3 card3 card4 card4 card5 card5 ."
 
+    }
+
+
+    .card-grid.left{
+
+      grid-template-areas: 
+      ". card1 card1 card1 card1 card2 card2 card2 ."
+      ". card1 card1 card1 card1 card2 card2 card2 ."
+      ". card1 card1 card1 card1 card2 card2 card2 ."
+      ". card1 card1 card1 card1 card3 card3 card3 ."
+      ". card4 card4 card5 card5 card3 card3 card3 ."
+      ". card4 card4 card5 card5 card3 card3 card3 ."
 
     }
+
 
    @media screen and (max-width: 500px)
    {
-     .card-grid{
-      display:grid;
-      max-width: 90%;
-      grid-template-columns: auto 90% auto;
-      grid-template-areas: ". card1 ." ". card2 ." ". card3 ." ". card4 ."". card5 .";
-    }
+
     h1{ font-size: 22px; line-height:18px; }
     h2{ font-size: 22px; line-height:18px; }
+
+    .card-grid{
+      display:grid;
+      max-width: 90%;
+      grid-template-columns: auto 95% auto;
+      grid-template-rows: repeat(5, 200px) ;
+    }
+
+    .card-grid.right{
+      grid-template-areas: ". card2 ." ". card1 ." ". card3 ." ". card4 ."". card5 .";
+    }
+    .card-grid.left{
+      grid-template-areas: ". card2 ." ". card1 ." ". card3 ." ". card4 ."". card5 .";
+    }
+
+    .header{
+      display:grid;
+      max-width: 100%;
+      grid-template-columns: auto;
+      grid-template-areas: "links" "home" "intro";
+    }
+
+
+
+    .intro{
+      font-size: 11.5px;
+    }
 
 
    }
    @media screen and (max-width: 700px) and (min-width: 500px)
    {
+    .header{
+      margin-top: 0;
+      display:grid;
+      grid-gap: 20px;
+      max-width: 100%;
+      grid-template-columns: auto;
+      grid-template-rows: 50px 20px 80px;
+      grid-template-areas: "links" "home" "intro";
+    }
     .card-grid{
       display:grid;
       max-width: 100%;
-      grid-template-columns: auto 90% auto;
-      grid-template-areas: ". card1 ." ". card2 ." ". card3 ." ". card4 ." ". card5 .";
+      grid-template-columns: auto 95% auto;
+      grid-template-rows: repeat(5, 200px) ;
     }
-    .header{ max-width: 85%; }
+
+    .card-grid.right{
+      grid-template-areas: ". card2 ." ". card1 ." ". card3 ." ". card4 ."". card5 .";
+    }
+    .card-grid.left{
+      grid-template-areas: ". card2 ." ". card1 ." ". card3 ." ". card4 ."". card5 .";
+    }
+     .intro{
+      font-size: 13px;
+    }
+
     h1{ font-size: 28px; line-height:18px; }
     h2{ font-size: 28px; line-height:18px; }
     p{ font-size: 14px; }
@@ -150,6 +273,11 @@
       transition:0;
     }
 
+
+    .card-heading.alt{
+      border-bottom: 1px solid var(--Gray);
+    }
+
     .card-subheading {
       padding-top: 5px;
       font-family:"Roboto Mono";
@@ -159,13 +287,17 @@
       font-weight: 300;
       color: white;
     }
+    .card-subheading.alt {
+      color: var(--Gray);
+
+    }
 
     .card-icon{
       grid-area: icon;
       float: right;
       margin-left: auto;
       margin-right: 20px;
-      margin-top: 10px;
+      margin-top: 20px;
 
     }
 
@@ -183,35 +315,59 @@
      
     }
 
-    .manolin{ 
+    .card.manolin{ 
       grid-area: card1;
       background-color: var(--Cyan);
     }
 
-
-
-    .deloitte{
+    .card.deloitte{
       grid-area: card2;
       background-color: var(--Blue);
-
     }
 
-    .growsquares{
+    .card.growsquares{
       grid-area: card3;
       background-color: var(--Yellow);
-
     }
 
-    .visuals{
+    .card.visuals{
       grid-area: card4;
       background-color: var(--Red);
     }
 
-    .dataviz{
+    .card.dataviz{
       grid-area: card5;
       background-color: var(--Gray);
-
     }
+
+    .card.architecture{ 
+      grid-area: card1;
+      background-color: var(--White);
+    }
+
+
+
+    .card.illustration{
+      grid-area: card2;
+      background-color: var(--Red);
+    }
+
+    .card.games{
+      grid-area: card3;
+      background-color: var(--Blue);
+    }
+
+    .card.video{
+      grid-area: card4;
+      background-color: var(--Gray);
+    }
+
+    .card.photo{
+      grid-area: card5;
+      background-color: var(--Yellow);
+    }
+
+
 
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
