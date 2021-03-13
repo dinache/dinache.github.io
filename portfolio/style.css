@@ -7,13 +7,16 @@
     --Orange: hsl(34, 97%, 64%);
     --Blue: #77818A;
     --Gray: #C5C5C5;
+    --Gray-Dark: #858585;
     --Dark-Blue: hsl(234, 12%, 34%);
     --Gray-Blue: hsl(229, 6%, 66%);
+
+    font-family: Amiko;
+    font-familly: "Roboto-Mono";
     }
 
     body{
-      font-family: Amiko;
-
+      
     }
 
     h1{
@@ -59,7 +62,9 @@
     }
 
     .intro{
-      color:var(--Gray);
+      font-family:"Roboto Mono";
+      font-weight: 400;
+      color:var(--Gray-Dark);
       margin-bottom: 40px;
     }
 
@@ -88,7 +93,7 @@
       display:grid;
       max-width: 90%;
       grid-template-columns: auto 90% auto;
-      grid-template-areas: ". card1 ." ". card2 ." ". card3 ." ". card4 .";
+      grid-template-areas: ". card1 ." ". card2 ." ". card3 ." ". card4 ."". card5 .";
     }
     h1{ font-size: 22px; line-height:18px; }
     h2{ font-size: 22px; line-height:18px; }
@@ -117,33 +122,37 @@
 }
 
     .card-content{
+
       position:relative ;
       padding: 5%;
       height: 85%;
       display: grid;
       grid-template-columns: 15px 1fr 1fr 1fr ;
-      grid-template-rows: auto 80px;
-      grid-template-areas: ". heading heading icon" ". subheading subheading subheading ";
+      grid-template-rows: auto auto 80px;
+      grid-template-areas: ". . . icon" ". heading heading ." ". subheading subheading subheading ";
     }
 
-    .card-heading {
 
+
+    .card-heading {
+      border-bottom:  1px solid white;
       max-width:90%;
       grid-area: heading;
       font-size: 18px;
       font-weight: 600;
-      color: rgba(0, 0, 0, 0.45);
+      color: rgba(0, 0, 0, 0.55);
       text-transform: uppercase;
       position: absolute;
       bottom: 10%;
     } 
 
     .card-subheading {
-      font-family:"Andale Mono";
+      padding-top: 5px;
+      font-family:"Roboto Mono";
       max-width:90%;
       grid-area: subheading;
       font-size: 14px;
-      font-weight: 100;
+      font-weight: 300;
       color: white;
     }
 
@@ -161,11 +170,18 @@
       border-radius: 1px;
     }
 
+    .card:hover{
+      opacity: 0.7;
+      transition: 0.5s;
+     
+    }
+
     .manolin{ 
       grid-area: card1;
       background-color: var(--Cyan);
-
     }
+
+
 
     .deloitte{
       grid-area: card2;
