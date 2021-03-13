@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="49px" viewBox="0 0 49 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 17</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Browser-Copy" transform="translate(-547.000000, -671.000000)">
+            <g id="Group-17" transform="translate(547.000000, 671.000000)">
+                <rect id="Rectangle" fill="#E9DCCC" x="0" y="0" width="49" height="49"></rect>
+                <g id="Group-13" transform="translate(10.000000, 9.000000)" fill="#669371">
+                    <rect id="Rectangle" x="9" y="0" width="6" height="6"></rect>
+                    <rect id="Rectangle-Copy-11" x="17" y="17" width="6" height="6"></rect>
+                    <rect id="Rectangle-Copy-13" x="8" y="25" width="6" height="6"></rect>
+                    <g id="Group-12" transform="translate(3.500000, 16.000000) rotate(90.000000) translate(-3.500000, -16.000000) translate(-4.000000, 13.000000)">
+                        <rect id="Rectangle-Copy-15" transform="translate(3.000000, 3.000000) rotate(90.000000) translate(-3.000000, -3.000000) " x="0" y="0" width="6" height="6"></rect>
+                        <rect id="Rectangle-Copy-16" transform="translate(12.000000, 3.000000) rotate(90.000000) translate(-12.000000, -3.000000) " x="9" y="0" width="6" height="6"></rect>
+                    </g>
+                    <rect id="Rectangle-Copy" x="18" y="0" width="6" height="6"></rect>
+                    <rect id="Rectangle-Copy-12" x="26" y="17" width="6" height="6"></rect>
+                    <rect id="Rectangle-Copy-14" x="17" y="25" width="6" height="6"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
