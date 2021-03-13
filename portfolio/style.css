@@ -135,7 +135,7 @@
 
 
     .card-heading {
-      border-bottom:  1px solid white;
+      border-bottom: 1px solid white;
       max-width:90%;
       grid-area: heading;
       font-size: 18px;
